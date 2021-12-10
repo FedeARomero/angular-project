@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "object-curly-spacing": ["error", "always"],
+        "quotes": ["error", "single"],
+        "keyword-spacing": ["error", { "before": true }],
+        "no-unused-vars": "error",
+        "space-before-function-paren": ["error", "always"],
+        "eqeqeq": ["error", "always"],
+        "space-infix-ops": "error",
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "brace-style": "error",
+        "curly": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+        "no-cond-assign": "error",
+        "block-spacing": "error",
+        "comma-dangle": ["error", "never"],
+        "comma-style": ["error", "last"],
+        "dot-location": ["error", "object"],
+        "eol-last": ["error", "always"],
+        "key-spacing": ["error"],
+        "object-property-newline": ["error", { "allowAllPropertiesOnSameLine": true }]
+      },
+      "excludedFiles": [
+        "*test.ts"
+      ]
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
