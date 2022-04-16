@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { AngularRoutingModule } from './angular-routing.module';
 import { AngularComponent } from './pages/angular/angular.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ResourceLinkComponent } from './components/resource-link/resource-link.component';
 
 @NgModule({
   declarations: [
     AngularComponent,
-    HeaderComponent
+    HeaderComponent,
+    ResourceLinkComponent
   ],
   imports: [
     CommonModule,
